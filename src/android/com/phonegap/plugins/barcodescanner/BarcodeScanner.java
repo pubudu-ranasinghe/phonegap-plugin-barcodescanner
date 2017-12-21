@@ -202,6 +202,8 @@ public class BarcodeScanner extends CordovaPlugin {
                 intentScan.setPackage(that.cordova.getActivity().getApplicationContext().getPackageName());
 
                 that.cordova.startActivityForResult(that, intentScan, REQUEST_CODE);
+
+                webView.getView().bringToFront();
             }
         });
     }
